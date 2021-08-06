@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>제목</title>
+</head>
+<body>
+	<form th:action="@{/form}" th:object="${user}" method="post">
+		<label for="name">이름：</label> 
+		<input type="text" th:field="*{name}"><br>
+		<label for="email">이메일주소：</label> 
+		<input type="email" th:field="*{email}"><br> 
+		<label for="age">나이：</label> 
+		<input type="number" th:field="*{age}"><br>
+		<button>전송</button>
+	</form>
+</body>
+</html>
